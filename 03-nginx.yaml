@@ -9,4 +9,5 @@
   - name: start the nginx
     ansible.builtin.service:
       name: nginx
-      state: started
+      state: started # just as systemctl start service 
+      enabled: yes # just as systemctl enable service 
