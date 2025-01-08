@@ -1,0 +1,12 @@
+- name: install and run nginx
+  hosts: web
+  become: yes # this means -b(means - become root user) is triggered 
+  tasks:
+  - name: install nginx
+    ansible.builtin.package:
+      name: nginx
+      state: present # present means to install, if given -> absent it means to remove
+  - name: start the nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
