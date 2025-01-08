@@ -1,0 +1,5 @@
+- name: PING
+  hosts: web
+  tasks: # Note: Here tasks or modules or collection is the same thing i.e., tasks=module=collection
+  - name: ping the server # Suppose i dont know what module i need to write here, in google just type -> ansible ping the server -> You will get module name, syntax and example everything will come 
+    ansible.builtin.ping: 
