@@ -7,8 +7,10 @@
     private: false #It is not confidential information & when we type course it did NOT show on screen earlier but with private: false stmt it will give the output on screen 
   - name: DURATION
     prompt: Please enter duration
+    private: false
   - name: TRAINER
     prompt: Please enter trainer name
+    private: false
   tasks:
   - name: print course information
     ansible.builtin.debug:
