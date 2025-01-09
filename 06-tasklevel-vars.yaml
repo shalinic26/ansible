@@ -1,0 +1,17 @@
+- name: Variables
+  hosts: local
+  connection: local
+  vars: # PLAY level variables
+    COURSE: "Devops with AWS"
+    DURATION: 120 HRS
+    TRAINER: SivaKumar
+  tasks:
+  - name: print the task level variable value
+    vars:
+      COURSE: Ansible
+      ansible.builtin.debug:
+        msg: "Course name is {{ COURSE }}, Duration is {{ DURATION }}, Trainer name is {{ TRAINER }}" # This entire msg i want to keep it in variable
+  
+  - name: print the variable value
+    ansible.builtin.debug:
+      msg: "Course name is {{ COURSE }}, Duration is {{ DURATION }}, Trainer name is {{ TRAINER }}"
