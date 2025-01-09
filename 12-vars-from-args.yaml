@@ -1,0 +1,8 @@
+- name: variables from Arguments # but nothing is mentioned in inventory.ini file for this file to read from there
+  hosts: local 
+  connection: local
+  tasks:
+  - name: print course information 
+    ansible.builtin.debug:
+      msg: "Course name is {{ COURSE }}, Duration is {{ DURATION }}, Trainer name is {{ TRAINER }}" 
+
