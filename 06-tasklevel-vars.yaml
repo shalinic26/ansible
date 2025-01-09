@@ -6,11 +6,11 @@
     DURATION: 120 HRS
     TRAINER: SivaKumar
   tasks:
-  - name: print the task level variable value
+  - name: print the task level variables value
     vars:
       COURSE: Ansible
-      ansible.builtin.debug:
-        msg: "Course name is {{ COURSE }}, Duration is {{ DURATION }}, Trainer name is {{ TRAINER }}" # This entire msg i want to keep it in variable
+    ansible.builtin.debug:
+      msg: "Course name is {{ COURSE }}, Duration is {{ DURATION }}, Trainer name is {{ TRAINER }}" # This entire msg i want to keep it in variable
   
   - name: print the variable value
     ansible.builtin.debug:
