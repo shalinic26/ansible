@@ -1,0 +1,8 @@
+- name: variables from inventory # WE are not declaring any vars in this file BUT kept vars info in inventory.ini file
+  hosts: local # May be becoz against local vars is written becoz of which it is able to read the vars info ??
+  connection: local
+  tasks:
+  - name: print course information # This code will be able to still read the vars from inventory.ini file and give us the o/p-> correctly
+    ansible.builtin.debug:
+      msg: "Course name is {{ COURSE }}, Duration is {{ DURATION }}, Trainer name is {{ TRAINER }}" 
+
