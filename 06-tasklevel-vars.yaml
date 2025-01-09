@@ -8,7 +8,7 @@
   tasks:
   - name: print the task level variables value
     vars:
-      COURSE: Ansible
+      COURSE: Ansible # Task level variables can over ride play level variables
     ansible.builtin.debug:
       msg: "Course name is {{ COURSE }}, Duration is {{ DURATION }}, Trainer name is {{ TRAINER }}" # This entire msg i want to keep it in variable
   
