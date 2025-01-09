@@ -1,0 +1,8 @@
+- name: variables undeclared # WE are not creating any vars neither in this file nor anywhere else
+  hosts: local
+  connection: local
+  tasks:
+  - name: print course information
+    ansible.builtin.debug:
+      msg: "Course name is {{ COURSE }}, Duration is {{ DURATION }}, Trainer name is {{ TRAINER }}"
+
