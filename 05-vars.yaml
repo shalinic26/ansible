@@ -7,6 +7,6 @@
     TRAINER: SivaKumar
   tasks:
   - name: print the variable values
-    anisble.builtin.debug:
+    ansible.builtin.debug:
       msg: "Course name is {{ COURSE }}, Duration is {{ DURATION }}, Trainer name is {{ TRAINER }}" # This entire msg i want to keep it in variable
       # Here variable data type is not imp we are just passing a text 
