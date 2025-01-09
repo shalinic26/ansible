@@ -1,0 +1,15 @@
+- name: variables from files
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: COURSE
+    prompt: Please enter course name
+    private: false #It is not confidential information & when we type course it did NOT show on screen earlier but with private: false stmt it will give the output on screen 
+  - name: DURATION
+    prompt: Please enter duration
+  - name: TRAINER
+    prompt: Please enter trainer name
+  tasks:
+  - name: print course information
+    ansible.builtin.debug:
+      msg "Course name is {{ COURSE }}, Duration is {{ DURATION }}, Trainer name is {{ TRAINER }}"
