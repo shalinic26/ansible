@@ -3,7 +3,7 @@
   connection: local
   vars:
     COURSE: "Devops with AWS"
-    DURATON: 120 HRS
+    DURATION: 120 HRS
     TRAINER: SivaKumar
   tasks:
   - name: print the variable values
