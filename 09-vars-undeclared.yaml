@@ -1,6 +1,6 @@
 - name: variables undeclared # WE are not creating any vars neither in this file nor anywhere else
-  hosts: local # In inventory.ini file --- COURSE related info is not present-- thstw hy we got error in output
-  connection: local
+  hosts: local # In inventory.ini file --- COURSE related info is not present-- thats why we got error in output
+  connection: local # but localhost text is written under [local] still it is not considering this. Only imp is COURSE, TRAINER and DURATION info should be present in .ini file
   tasks:
   - name: print course information
     ansible.builtin.debug:
