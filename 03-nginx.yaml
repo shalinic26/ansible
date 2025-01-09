@@ -1,8 +1,8 @@
-- name: install and run nginx
+- name: install and run nginx # - means list
   hosts: web
   become: yes # this means -b(means - become root user) is triggered 
   tasks:
-  - name: install nginx
+  - name: install nginx # We need to do this in master node ; worker node not required
     ansible.builtin.package:
       name: nginx
       state: present # present means to install, if given -> absent it means to remove
