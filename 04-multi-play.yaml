@@ -6,8 +6,8 @@
     ansible.builtin.debug:  
       msg: "Hello from PLAY1 and TASK1"
 
-- name: PLAY2
-  hosts: local 
+- name: PLAY2 # Here i did not understand which server IP it is taking as we only have 1 ansible server and its IP we have mentioned in local
+  hosts: local # Now which local it is trying to connect, if its same server then why are we writing 2 playbooks here??
   connection: local 
   tasks: 
   - name: PLAY2 and TASK1

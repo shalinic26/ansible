@@ -1,0 +1,12 @@
+- name: Variables
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "Devops with AWS"
+    DURATON: 120 HRS
+    TRAINER: SivaKumar
+  tasks:
+  - name: print the variable values
+    anisble.builtin.debug:
+      msg: "Course name is {{ COURSE }}, Duration is {{ DURATION }}, Trainer name is {{ TRAINER }}" # This entire msg i want to keep it in variable
+      # Here variable data type is not imp we are just passing a text 
