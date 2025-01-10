@@ -17,5 +17,5 @@
   tasks: # For printing the code in this file tasks are written
   - name: print course information as output
     ansible.builtin.debug:
-      msg: "I am learning {{ course_name }}, course for duration: {{ duration }} hours, covering topics: {{ topics }}, 
-        & Its a live {{ live }} classes, tools taughts are: {{ tools }}"
+      msg: "I am learning {{ course_name }} course, for duration: {{ duration }} hours, covering topics: {{ topics }}, 
+        & Its a Online class: {{ live }}, Tools taught are: {{ tools }}"
