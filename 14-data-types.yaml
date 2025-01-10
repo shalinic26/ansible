@@ -4,13 +4,13 @@
   vars:
     course_name: "DevOps with AWS" # String data type
     duration: 120 # number
-    topics: # list
+    topics: # list, represented in [] this means list 
     - Linux
     - Shell Scripting
     - Ansible
     - AWS Cloud
     live: true # boolean
-    tools: # map (key value pair)
+    tools: # map (key value pair) # map is represented as {} this means map
       CI: Jenkins
       Containerization: Docker
       InfrastructuteAsCode: Terraform
