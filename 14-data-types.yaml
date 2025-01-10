@@ -1,0 +1,21 @@
+- name: DevOps Course information # name section is written as its the name of this playbook & purpose for writing this playbook should be written here
+  hosts: local
+  connection: local
+  vars:
+    course_name: "DevOps with AWS" # String data type
+    duration: 120 # number
+    topics: # list
+    - Linux
+    - Shell Scripting
+    - Ansible
+    - AWS Cloud
+    live: true # boolean
+    tools: # map (key value pair)
+      CI: Jenkins
+      Containerization: Docker
+      InfrastructuteAsCode: Terraform
+    tasks: # For printing the code in this file tasks are written
+    - name: print course information as output
+      ansible.builtin.debug:
+        msg: "I am learning {{ course_name }}, course for duration: {{ duration }} hours, covering topics: {{ topics }}, 
+        & Its a live {{ live }} classes, tools taughts are: {{ tools }}"
