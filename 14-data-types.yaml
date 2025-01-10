@@ -1,7 +1,7 @@
 - name: DevOps Course information # name section is written as its the name of this playbook & purpose for writing this playbook should be written here
   hosts: local
   connection: local
-  vars:
+  vars: # Even this is map, then why its output is not shown in {}??
     course_name: "DevOps with AWS" # String data type
     duration: 120 # number
     topics: # list, represented in [] this means list 
