@@ -14,8 +14,8 @@
       CI: Jenkins
       Containerization: Docker
       InfrastructuteAsCode: Terraform
-    tasks: # For printing the code in this file tasks are written
-    - name: print course information as output
-      ansible.builtin.debug:
-        msg: "I am learning {{ course_name }}, course for duration: {{ duration }} hours, covering topics: {{ topics }}, 
+  tasks: # For printing the code in this file tasks are written
+  - name: print course information as output
+    ansible.builtin.debug:
+      msg: "I am learning {{ course_name }}, course for duration: {{ duration }} hours, covering topics: {{ topics }}, 
         & Its a live {{ live }} classes, tools taughts are: {{ tools }}"
