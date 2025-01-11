@@ -1,0 +1,7 @@
+- name: undefined variable testing i.e. filters
+  hosts: local
+  connection: local
+  tasks:
+  - name: handle undefine variables
+    ansible.builtin.debug:
+      msg: "Hello {{ person | default('Anish') }}"
