@@ -6,7 +6,7 @@
     ansible.builtin.package:
       name: "{{ item }}" # first time we gave "" against name variable  
       state: Installed #/Or we can also give present
-    loops:
+    loop:
     - gcc
     - mysql
     - git
