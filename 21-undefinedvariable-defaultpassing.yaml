@@ -48,8 +48,14 @@
     ansible.builtin.debug:
       msg: "Min is: {{ numbers | min }}, Max is: {{ numbers | max }}"    
 
-  - name: check IP address is valid or not
+  - name: check IP address is valid or not # This code did not run directly we had to install netaddr python library before running this cmd
     vars:
       ip: "2567:255:25:256"
     ansible.builtin.debug:
-      msg: "{{ ip | ansible.utils.ipaddr }}"
+      msg: "{{ ip | ansible.utils.ipaddr }}" # o/p-> false
+
+  - name: check IP address is valid or not # This code did not run directly we had to install netaddr python library before running this cmd
+    vars:
+      ip: "192.168.1.1"
+    ansible.builtin.debug:
+      msg: "{{ ip | ansible.utils.ipaddr }}" # o/p-> true
