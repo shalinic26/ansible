@@ -6,7 +6,7 @@
     ansible.builtin.package:
       name: "{{ item.name }}"
       state: "{{ item.state }}"
-    loop:
+    loop: # The below way of writing is called as list way
     - {name: 'gcc', state: 'present'} 
     - {name: 'mysql', state: 'absent'}
     - {name: 'git', state: 'present'}

@@ -19,4 +19,15 @@
         duration: 120 Hrs
         trainer: Sivakumar 
     ansible.builtin.debug:
-      msg: "Course info: {{ course | dict2items }}"
+      msg: "Course info: {{ course | dict2items }}" # o/p-> will be shown in key value pair 
+
+  - name: convert list into map
+    vars: # List way of writing the variables
+      course: 
+      - {'Key': 'name', 'value': 'DevOps with AWS'} 
+      - {'Key': 'duration', 'value': '120 HRS'}
+      - {'Key': 'trainer', 'value': 'SivaKumar'}
+    ansible.builtin.debug:
+      msg: "Course info: {{ course | items2dict }}" # o/p-> will be shown in map format 
+
+      
