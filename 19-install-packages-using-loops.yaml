@@ -5,7 +5,7 @@
   - name: Install packages
     ansible.builtin.package:
       name: "{{ item }}" # first time we gave "" against name variable  
-      state: Installed #/Or we can also give present
+      state: installed #/Or we can also give present
     loop:
     - gcc
     - mysql
