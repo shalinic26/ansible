@@ -1,0 +1,14 @@
+- name: Install packages using loops concept
+  hosts: web
+  become: yes
+  tasks:
+  - name: Install packages
+    ansible.built.in.packages:
+      name: "{{ item }}" # first time we gave "" against name variable  
+      state: Installed #/Or we can also give present
+    loops:
+    - gcc
+    - mysql
+    - git
+    - zip
+      
