@@ -1,5 +1,5 @@
-- name: Install nginx on 2nd ansible-node
-  hosts: web
+- name: Install nginx on 2nd ansible-node using conditions
+  hosts: web # Has node 2 private ip add
   become: yes
   tasks:
   - name: install nginx if RHEL is OS
