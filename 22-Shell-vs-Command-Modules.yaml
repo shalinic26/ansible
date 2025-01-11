@@ -12,5 +12,5 @@
     register: command_result
 
   - name: print the output
-    ansible.builtin.command:
+    ansible.builtin.debug:
       msg: "{{ command_result }}"    
