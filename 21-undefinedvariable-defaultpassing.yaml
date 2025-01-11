@@ -58,4 +58,4 @@
     vars:
       ip: "192.168.1.1"
     ansible.builtin.debug:
-      msg: "{{ ip | ansible.utils.ipaddr }}" # o/p-> true
+      msg: "{{ ip | ansible.utils.ipaddr }}" # o/p-> 192.168.1.1 --- > true did not come directly IP add came
