@@ -21,10 +21,10 @@
     ansible.builtin.debug:
       msg: "Course info: {{ course | dict2items }}" # o/p-> will be shown in key value pair 
 
-  - name: convert list into map # ------------- This code is not working for me **************
+  - name: convert list into map # ------------- This code is not working for me **************started working
     vars: # List way of writing the variables
       course: 
-      - {'key': 'name', 'value': 'devopswithaws'}
+      - {'key': 'name', 'value': 'devopswithaws'} # I wrote key word in caps i.e., Key for error which i was getting 
       - {'key': 'duration', 'value': '120hrs'}
       - {'key': 'trainer', 'value': 'sivakumar'}
     ansible.builtin.debug:
@@ -35,3 +35,9 @@
       name: "Shalini Chintala"
     ansible.builtin.debug:
       msg: "Hello {{ name | lower }}"    
+  
+  - name: convert lower to upper
+    vars:
+      name: "shalini chintala"
+    ansible.builtin.debug:
+      msg: "Hello {{ name | upper }}"    
