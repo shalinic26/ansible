@@ -1,0 +1,6 @@
+- name: Gathering facts testing
+  hosts: web
+  tasks:
+  - name: Print the facts as we havent given anything anywhere
+    ansible.builtin.debug:
+      msg: "{{ ansible_facts }}" # Lets check first of all what ansible tries to gather??
