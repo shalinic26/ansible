@@ -62,4 +62,4 @@
       wait: true
       overwrite: true
     loop: "{{ ec2_info.results}}"
-    when: item.item == "frontend" # why this is written last  i feel it should be above loop ??
+    when: item.item == "frontendaws" # why this is written last  i feel it should be above loop ??
