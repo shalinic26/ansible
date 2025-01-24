@@ -1,4 +1,4 @@
-- name: create ec2 instances and route 53 records
+- name: create ec2 and route 53 records
   connection: local
   hosts: local
   vars:
@@ -19,7 +19,7 @@
     - boto3
     - botocore
   - name: create ec2 instances
-    amazon.aws.ec2-instance:
+    amazon.aws.ec2_instance:
       name: "{{ item }}" # item is the reserved key word to pick the names present in loop
       subnet_id: "{{ subnet_id }}"
       security_group: "{{ sg_id }}" 
