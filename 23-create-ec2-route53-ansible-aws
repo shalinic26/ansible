@@ -27,3 +27,13 @@
       instance_type: "{{ instance_type }}"
     loop: "{{ instances }}" # loop has to pick the names present in vars which is already written in list format 
       # so instead of writing - mysqlaws, in next row - backendaws, next row - frontendaws;; we are just writing in flower brackets 
+    register: ec2_info # Our 3 instances which got created their output is stored in register
+
+  - name: print ec2_info   
+    ansible.builtin.debug:
+      msg: "{{ ec2_info }}"
+
+  - name: Print private ip address of 3 created instances
+    ansible.builtin.debug:
+      msg: "{{ item.instances[0].private_ip_address }}"
+    loop: "{{ ec2_info.results}}"
