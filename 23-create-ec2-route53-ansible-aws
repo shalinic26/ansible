@@ -1,0 +1,29 @@
+- name: create ec2 instances and route 53 records
+  connection: local
+  hosts: local
+  vars:
+    ami_id: ami-09c813fb71547fc4f
+    instance_type: t3.micro
+    subnet_id: subnet-3c9a101d
+    sg_id: sg-049e25976fa9ed337
+    instances:
+    - mysqlaws
+    - backendaws
+    - frontendaws
+  tasks:
+  - name: Install Python Libraries # This section we need to write as Ansible using Python libraries to connect to AWS but we did not installed then in our Ansible server
+    ansible.builtin.pip:
+      name: "{{ item }}"
+      executable: pip3.9
+    loop:
+    - boto3
+    - botocore
+  - name: create ec2 instances
+    amazon.aws.ec2-instance:
+      name: "{{ item }}" # item is the reserved key word to pick the names present in loop
+      subnet_id: "{{ subnet_id }}"
+      security_group: "{{ sg_id }}" 
+      image_id: "{{ ami_id }}"
+      instance_type: "{{ instance_type }}"
+    loop: "{{ instances }}" # loop has to pick the names present in vars which is already written in list format 
+      # so instead of writing - mysqlaws, in next row - backendaws, next row - frontendaws;; we are just writing in flower brackets 
