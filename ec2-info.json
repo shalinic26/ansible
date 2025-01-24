@@ -1,0 +1,676 @@
+{
+    "changed": false,
+    "msg": "All items completed",
+    "results": [
+        {
+            "ansible_loop_var": "item",
+            "changed": false,
+            "changes": [],
+            "failed": false,
+            "instance_ids": [
+                "i-0e138e000358dec60"
+            ],
+            "instances": [
+                {
+                    "ami_launch_index": 0,
+                    "architecture": "x86_64",
+                    "block_device_mappings": [
+                        {
+                            "device_name": "/dev/sda1",
+                            "ebs": {
+                                "attach_time": "2025-01-24T18:31:29+00:00",
+                                "delete_on_termination": true,
+                                "status": "attached",
+                                "volume_id": "vol-0788bbe29a13988a1"
+                            }
+                        }
+                    ],
+                    "boot_mode": "uefi-preferred",
+                    "capacity_reservation_specification": {
+                        "capacity_reservation_preference": "open"
+                    },
+                    "client_token": "abe51c1693b94eab83a24326ced02d55",
+                    "cpu_options": {
+                        "core_count": 1,
+                        "threads_per_core": 2
+                    },
+                    "current_instance_boot_mode": "uefi",
+                    "ebs_optimized": false,
+                    "ena_support": true,
+                    "enclave_options": {
+                        "enabled": false
+                    },
+                    "hibernation_options": {
+                        "configured": false
+                    },
+                    "hypervisor": "xen",
+                    "image_id": "ami-09c813fb71547fc4f",
+                    "instance_id": "i-0e138e000358dec60",
+                    "instance_type": "t3.micro",
+                    "launch_time": "2025-01-24T18:31:29+00:00",
+                    "maintenance_options": {
+                        "auto_recovery": "default"
+                    },
+                    "metadata_options": {
+                        "http_endpoint": "enabled",
+                        "http_protocol_ipv6": "disabled",
+                        "http_put_response_hop_limit": 1,
+                        "http_tokens": "optional",
+                        "instance_metadata_tags": "disabled",
+                        "state": "applied"
+                    },
+                    "monitoring": {
+                        "state": "disabled"
+                    },
+                    "network_interfaces": [
+                        {
+                            "association": {
+                                "ip_owner_id": "amazon",
+                                "public_dns_name": "ec2-3-89-123-65.compute-1.amazonaws.com",
+                                "public_ip": "3.89.123.65"
+                            },
+                            "attachment": {
+                                "attach_time": "2025-01-24T18:31:29+00:00",
+                                "attachment_id": "eni-attach-011ea5b9761fc2b24",
+                                "delete_on_termination": true,
+                                "device_index": 0,
+                                "network_card_index": 0,
+                                "status": "attached"
+                            },
+                            "description": "",
+                            "groups": [
+                                {
+                                    "group_id": "sg-049e25976fa9ed337",
+                                    "group_name": "allow-all"
+                                }
+                            ],
+                            "interface_type": "interface",
+                            "ipv6_addresses": [],
+                            "mac_address": "12:85:8e:ea:f7:df",
+                            "network_interface_id": "eni-084dcaba5b8f118c4",
+                            "operator": {
+                                "managed": false
+                            },
+                            "owner_id": "134215552731",
+                            "private_dns_name": "ip-172-31-93-0.ec2.internal",
+                            "private_ip_address": "172.31.93.0",
+                            "private_ip_addresses": [
+                                {
+                                    "association": {
+                                        "ip_owner_id": "amazon",
+                                        "public_dns_name": "ec2-3-89-123-65.compute-1.amazonaws.com",
+                                        "public_ip": "3.89.123.65"
+                                    },
+                                    "primary": true,
+                                    "private_dns_name": "ip-172-31-93-0.ec2.internal",
+                                    "private_ip_address": "172.31.93.0"
+                                }
+                            ],
+                            "source_dest_check": true,
+                            "status": "in-use",
+                            "subnet_id": "subnet-3c9a101d",
+                            "vpc_id": "vpc-8b06def6"
+                        }
+                    ],
+                    "network_performance_options": {
+                        "bandwidth_weighting": "default"
+                    },
+                    "operator": {
+                        "managed": false
+                    },
+                    "placement": {
+                        "availability_zone": "us-east-1d",
+                        "group_name": "",
+                        "tenancy": "default"
+                    },
+                    "platform_details": "Red Hat Enterprise Linux",
+                    "private_dns_name": "ip-172-31-93-0.ec2.internal",
+                    "private_dns_name_options": {
+                        "enable_resource_name_dns_a_record": false,
+                        "enable_resource_name_dns_aaaa_record": false,
+                        "hostname_type": "ip-name"
+                    },
+                    "private_ip_address": "172.31.93.0",
+                    "product_codes": [],
+                    "public_dns_name": "ec2-3-89-123-65.compute-1.amazonaws.com",
+                    "public_ip_address": "3.89.123.65",
+                    "root_device_name": "/dev/sda1",
+                    "root_device_type": "ebs",
+                    "security_groups": [
+                        {
+                            "group_id": "sg-049e25976fa9ed337",
+                            "group_name": "allow-all"
+                        }
+                    ],
+                    "source_dest_check": true,
+                    "state": {
+                        "code": 16,
+                        "name": "running"
+                    },
+                    "state_transition_reason": "",
+                    "subnet_id": "subnet-3c9a101d",
+                    "tags": {
+                        "Name": "mysqlaws"
+                    },
+                    "usage_operation": "RunInstances:0010",
+                    "usage_operation_update_time": "2025-01-24T18:31:29+00:00",
+                    "virtualization_type": "hvm",
+                    "vpc_id": "vpc-8b06def6"
+                }
+            ],
+            "invocation": {
+                "module_args": {
+                    "aap_callback": null,
+                    "access_key": null,
+                    "availability_zone": null,
+                    "aws_ca_bundle": "/etc/pki/tls/certs/ca-bundle.crt",
+                    "aws_config": null,
+                    "count": null,
+                    "cpu_credit_specification": null,
+                    "cpu_options": null,
+                    "debug_botocore_endpoint_logs": false,
+                    "detailed_monitoring": null,
+                    "ebs_optimized": null,
+                    "endpoint_url": null,
+                    "exact_count": null,
+                    "filters": {
+                        "image-id": [
+                            "ami-09c813fb71547fc4f"
+                        ],
+                        "instance-state-name": [
+                            "pending",
+                            "running",
+                            "stopping",
+                            "stopped"
+                        ],
+                        "subnet-id": [
+                            "subnet-3c9a101d"
+                        ],
+                        "tag:Name": [
+                            "mysqlaws"
+                        ]
+                    },
+                    "hibernation_options": false,
+                    "iam_instance_profile": null,
+                    "image": null,
+                    "image_id": "ami-09c813fb71547fc4f",
+                    "instance_ids": [],
+                    "instance_initiated_shutdown_behavior": null,
+                    "instance_type": "t3.micro",
+                    "key_name": null,
+                    "launch_template": null,
+                    "metadata_options": null,
+                    "name": "mysqlaws",
+                    "network": null,
+                    "placement_group": null,
+                    "profile": null,
+                    "purge_tags": true,
+                    "region": "us-east-1",
+                    "secret_key": null,
+                    "security_group": "sg-049e25976fa9ed337",
+                    "security_groups": [],
+                    "session_token": null,
+                    "state": "present",
+                    "subnet_id": "subnet-3c9a101d",
+                    "tags": null,
+                    "tenancy": null,
+                    "termination_protection": null,
+                    "user_data": null,
+                    "validate_certs": true,
+                    "volumes": null,
+                    "vpc_subnet_id": "subnet-3c9a101d",
+                    "wait": true,
+                    "wait_timeout": 600
+                }
+            },
+            "item": "mysqlaws"
+        },
+        {
+            "ansible_loop_var": "item",
+            "changed": false,
+            "changes": [],
+            "failed": false,
+            "instance_ids": [
+                "i-004afdd0dd9278066"
+            ],
+            "instances": [
+                {
+                    "ami_launch_index": 0,
+                    "architecture": "x86_64",
+                    "block_device_mappings": [
+                        {
+                            "device_name": "/dev/sda1",
+                            "ebs": {
+                                "attach_time": "2025-01-24T18:31:48+00:00",
+                                "delete_on_termination": true,
+                                "status": "attached",
+                                "volume_id": "vol-05073ceb6cff6075f"
+                            }
+                        }
+                    ],
+                    "boot_mode": "uefi-preferred",
+                    "capacity_reservation_specification": {
+                        "capacity_reservation_preference": "open"
+                    },
+                    "client_token": "a83d6d6a84134cfd8915ca7b41677fdb",
+                    "cpu_options": {
+                        "core_count": 1,
+                        "threads_per_core": 2
+                    },
+                    "current_instance_boot_mode": "uefi",
+                    "ebs_optimized": false,
+                    "ena_support": true,
+                    "enclave_options": {
+                        "enabled": false
+                    },
+                    "hibernation_options": {
+                        "configured": false
+                    },
+                    "hypervisor": "xen",
+                    "image_id": "ami-09c813fb71547fc4f",
+                    "instance_id": "i-004afdd0dd9278066",
+                    "instance_type": "t3.micro",
+                    "launch_time": "2025-01-24T18:31:47+00:00",
+                    "maintenance_options": {
+                        "auto_recovery": "default"
+                    },
+                    "metadata_options": {
+                        "http_endpoint": "enabled",
+                        "http_protocol_ipv6": "disabled",
+                        "http_put_response_hop_limit": 1,
+                        "http_tokens": "optional",
+                        "instance_metadata_tags": "disabled",
+                        "state": "applied"
+                    },
+                    "monitoring": {
+                        "state": "disabled"
+                    },
+                    "network_interfaces": [
+                        {
+                            "association": {
+                                "ip_owner_id": "amazon",
+                                "public_dns_name": "ec2-52-91-230-109.compute-1.amazonaws.com",
+                                "public_ip": "52.91.230.109"
+                            },
+                            "attachment": {
+                                "attach_time": "2025-01-24T18:31:47+00:00",
+                                "attachment_id": "eni-attach-03d42b9359ffc6080",
+                                "delete_on_termination": true,
+                                "device_index": 0,
+                                "network_card_index": 0,
+                                "status": "attached"
+                            },
+                            "description": "",
+                            "groups": [
+                                {
+                                    "group_id": "sg-049e25976fa9ed337",
+                                    "group_name": "allow-all"
+                                }
+                            ],
+                            "interface_type": "interface",
+                            "ipv6_addresses": [],
+                            "mac_address": "12:4a:84:63:ce:1f",
+                            "network_interface_id": "eni-0aa7c89086892a31a",
+                            "operator": {
+                                "managed": false
+                            },
+                            "owner_id": "134215552731",
+                            "private_dns_name": "ip-172-31-86-96.ec2.internal",
+                            "private_ip_address": "172.31.86.96",
+                            "private_ip_addresses": [
+                                {
+                                    "association": {
+                                        "ip_owner_id": "amazon",
+                                        "public_dns_name": "ec2-52-91-230-109.compute-1.amazonaws.com",
+                                        "public_ip": "52.91.230.109"
+                                    },
+                                    "primary": true,
+                                    "private_dns_name": "ip-172-31-86-96.ec2.internal",
+                                    "private_ip_address": "172.31.86.96"
+                                }
+                            ],
+                            "source_dest_check": true,
+                            "status": "in-use",
+                            "subnet_id": "subnet-3c9a101d",
+                            "vpc_id": "vpc-8b06def6"
+                        }
+                    ],
+                    "network_performance_options": {
+                        "bandwidth_weighting": "default"
+                    },
+                    "operator": {
+                        "managed": false
+                    },
+                    "placement": {
+                        "availability_zone": "us-east-1d",
+                        "group_name": "",
+                        "tenancy": "default"
+                    },
+                    "platform_details": "Red Hat Enterprise Linux",
+                    "private_dns_name": "ip-172-31-86-96.ec2.internal",
+                    "private_dns_name_options": {
+                        "enable_resource_name_dns_a_record": false,
+                        "enable_resource_name_dns_aaaa_record": false,
+                        "hostname_type": "ip-name"
+                    },
+                    "private_ip_address": "172.31.86.96",
+                    "product_codes": [],
+                    "public_dns_name": "ec2-52-91-230-109.compute-1.amazonaws.com",
+                    "public_ip_address": "52.91.230.109",
+                    "root_device_name": "/dev/sda1",
+                    "root_device_type": "ebs",
+                    "security_groups": [
+                        {
+                            "group_id": "sg-049e25976fa9ed337",
+                            "group_name": "allow-all"
+                        }
+                    ],
+                    "source_dest_check": true,
+                    "state": {
+                        "code": 16,
+                        "name": "running"
+                    },
+                    "state_transition_reason": "",
+                    "subnet_id": "subnet-3c9a101d",
+                    "tags": {
+                        "Name": "backendaws"
+                    },
+                    "usage_operation": "RunInstances:0010",
+                    "usage_operation_update_time": "2025-01-24T18:31:47+00:00",
+                    "virtualization_type": "hvm",
+                    "vpc_id": "vpc-8b06def6"
+                }
+            ],
+            "invocation": {
+                "module_args": {
+                    "aap_callback": null,
+                    "access_key": null,
+                    "availability_zone": null,
+                    "aws_ca_bundle": "/etc/pki/tls/certs/ca-bundle.crt",
+                    "aws_config": null,
+                    "count": null,
+                    "cpu_credit_specification": null,
+                    "cpu_options": null,
+                    "debug_botocore_endpoint_logs": false,
+                    "detailed_monitoring": null,
+                    "ebs_optimized": null,
+                    "endpoint_url": null,
+                    "exact_count": null,
+                    "filters": {
+                        "image-id": [
+                            "ami-09c813fb71547fc4f"
+                        ],
+                        "instance-state-name": [
+                            "pending",
+                            "running",
+                            "stopping",
+                            "stopped"
+                        ],
+                        "subnet-id": [
+                            "subnet-3c9a101d"
+                        ],
+                        "tag:Name": [
+                            "backendaws"
+                        ]
+                    },
+                    "hibernation_options": false,
+                    "iam_instance_profile": null,
+                    "image": null,
+                    "image_id": "ami-09c813fb71547fc4f",
+                    "instance_ids": [],
+                    "instance_initiated_shutdown_behavior": null,
+                    "instance_type": "t3.micro",
+                    "key_name": null,
+                    "launch_template": null,
+                    "metadata_options": null,
+                    "name": "backendaws",
+                    "network": null,
+                    "placement_group": null,
+                    "profile": null,
+                    "purge_tags": true,
+                    "region": "us-east-1",
+                    "secret_key": null,
+                    "security_group": "sg-049e25976fa9ed337",
+                    "security_groups": [],
+                    "session_token": null,
+                    "state": "present",
+                    "subnet_id": "subnet-3c9a101d",
+                    "tags": null,
+                    "tenancy": null,
+                    "termination_protection": null,
+                    "user_data": null,
+                    "validate_certs": true,
+                    "volumes": null,
+                    "vpc_subnet_id": "subnet-3c9a101d",
+                    "wait": true,
+                    "wait_timeout": 600
+                }
+            },
+            "item": "backendaws"
+        },
+        {
+            "ansible_loop_var": "item",
+            "changed": false,
+            "changes": [],
+            "failed": false,
+            "instance_ids": [
+                "i-05bb810b44458e3d5"
+            ],
+            "instances": [
+                {
+                    "ami_launch_index": 0,
+                    "architecture": "x86_64",
+                    "block_device_mappings": [
+                        {
+                            "device_name": "/dev/sda1",
+                            "ebs": {
+                                "attach_time": "2025-01-24T18:32:07+00:00",
+                                "delete_on_termination": true,
+                                "status": "attached",
+                                "volume_id": "vol-0c709262240d5e029"
+                            }
+                        }
+                    ],
+                    "boot_mode": "uefi-preferred",
+                    "capacity_reservation_specification": {
+                        "capacity_reservation_preference": "open"
+                    },
+                    "client_token": "771fd47d8143444f90f2ec481c73ec2b",
+                    "cpu_options": {
+                        "core_count": 1,
+                        "threads_per_core": 2
+                    },
+                    "current_instance_boot_mode": "uefi",
+                    "ebs_optimized": false,
+                    "ena_support": true,
+                    "enclave_options": {
+                        "enabled": false
+                    },
+                    "hibernation_options": {
+                        "configured": false
+                    },
+                    "hypervisor": "xen",
+                    "image_id": "ami-09c813fb71547fc4f",
+                    "instance_id": "i-05bb810b44458e3d5",
+                    "instance_type": "t3.micro",
+                    "launch_time": "2025-01-24T18:32:06+00:00",
+                    "maintenance_options": {
+                        "auto_recovery": "default"
+                    },
+                    "metadata_options": {
+                        "http_endpoint": "enabled",
+                        "http_protocol_ipv6": "disabled",
+                        "http_put_response_hop_limit": 1,
+                        "http_tokens": "optional",
+                        "instance_metadata_tags": "disabled",
+                        "state": "applied"
+                    },
+                    "monitoring": {
+                        "state": "disabled"
+                    },
+                    "network_interfaces": [
+                        {
+                            "association": {
+                                "ip_owner_id": "amazon",
+                                "public_dns_name": "ec2-54-85-53-150.compute-1.amazonaws.com",
+                                "public_ip": "54.85.53.150"
+                            },
+                            "attachment": {
+                                "attach_time": "2025-01-24T18:32:06+00:00",
+                                "attachment_id": "eni-attach-05e43b5f97a70a0f4",
+                                "delete_on_termination": true,
+                                "device_index": 0,
+                                "network_card_index": 0,
+                                "status": "attached"
+                            },
+                            "description": "",
+                            "groups": [
+                                {
+                                    "group_id": "sg-049e25976fa9ed337",
+                                    "group_name": "allow-all"
+                                }
+                            ],
+                            "interface_type": "interface",
+                            "ipv6_addresses": [],
+                            "mac_address": "12:3b:73:9e:ea:f5",
+                            "network_interface_id": "eni-0a7e93e3862c31b95",
+                            "operator": {
+                                "managed": false
+                            },
+                            "owner_id": "134215552731",
+                            "private_dns_name": "ip-172-31-84-136.ec2.internal",
+                            "private_ip_address": "172.31.84.136",
+                            "private_ip_addresses": [
+                                {
+                                    "association": {
+                                        "ip_owner_id": "amazon",
+                                        "public_dns_name": "ec2-54-85-53-150.compute-1.amazonaws.com",
+                                        "public_ip": "54.85.53.150"
+                                    },
+                                    "primary": true,
+                                    "private_dns_name": "ip-172-31-84-136.ec2.internal",
+                                    "private_ip_address": "172.31.84.136"
+                                }
+                            ],
+                            "source_dest_check": true,
+                            "status": "in-use",
+                            "subnet_id": "subnet-3c9a101d",
+                            "vpc_id": "vpc-8b06def6"
+                        }
+                    ],
+                    "network_performance_options": {
+                        "bandwidth_weighting": "default"
+                    },
+                    "operator": {
+                        "managed": false
+                    },
+                    "placement": {
+                        "availability_zone": "us-east-1d",
+                        "group_name": "",
+                        "tenancy": "default"
+                    },
+                    "platform_details": "Red Hat Enterprise Linux",
+                    "private_dns_name": "ip-172-31-84-136.ec2.internal",
+                    "private_dns_name_options": {
+                        "enable_resource_name_dns_a_record": false,
+                        "enable_resource_name_dns_aaaa_record": false,
+                        "hostname_type": "ip-name"
+                    },
+                    "private_ip_address": "172.31.84.136",
+                    "product_codes": [],
+                    "public_dns_name": "ec2-54-85-53-150.compute-1.amazonaws.com",
+                    "public_ip_address": "54.85.53.150",
+                    "root_device_name": "/dev/sda1",
+                    "root_device_type": "ebs",
+                    "security_groups": [
+                        {
+                            "group_id": "sg-049e25976fa9ed337",
+                            "group_name": "allow-all"
+                        }
+                    ],
+                    "source_dest_check": true,
+                    "state": {
+                        "code": 16,
+                        "name": "running"
+                    },
+                    "state_transition_reason": "",
+                    "subnet_id": "subnet-3c9a101d",
+                    "tags": {
+                        "Name": "frontendaws"
+                    },
+                    "usage_operation": "RunInstances:0010",
+                    "usage_operation_update_time": "2025-01-24T18:32:06+00:00",
+                    "virtualization_type": "hvm",
+                    "vpc_id": "vpc-8b06def6"
+                }
+            ],
+            "invocation": {
+                "module_args": {
+                    "aap_callback": null,
+                    "access_key": null,
+                    "availability_zone": null,
+                    "aws_ca_bundle": "/etc/pki/tls/certs/ca-bundle.crt",
+                    "aws_config": null,
+                    "count": null,
+                    "cpu_credit_specification": null,
+                    "cpu_options": null,
+                    "debug_botocore_endpoint_logs": false,
+                    "detailed_monitoring": null,
+                    "ebs_optimized": null,
+                    "endpoint_url": null,
+                    "exact_count": null,
+                    "filters": {
+                        "image-id": [
+                            "ami-09c813fb71547fc4f"
+                        ],
+                        "instance-state-name": [
+                            "pending",
+                            "running",
+                            "stopping",
+                            "stopped"
+                        ],
+                        "subnet-id": [
+                            "subnet-3c9a101d"
+                        ],
+                        "tag:Name": [
+                            "frontendaws"
+                        ]
+                    },
+                    "hibernation_options": false,
+                    "iam_instance_profile": null,
+                    "image": null,
+                    "image_id": "ami-09c813fb71547fc4f",
+                    "instance_ids": [],
+                    "instance_initiated_shutdown_behavior": null,
+                    "instance_type": "t3.micro",
+                    "key_name": null,
+                    "launch_template": null,
+                    "metadata_options": null,
+                    "name": "frontendaws",
+                    "network": null,
+                    "placement_group": null,
+                    "profile": null,
+                    "purge_tags": true,
+                    "region": "us-east-1",
+                    "secret_key": null,
+                    "security_group": "sg-049e25976fa9ed337",
+                    "security_groups": [],
+                    "session_token": null,
+                    "state": "present",
+                    "subnet_id": "subnet-3c9a101d",
+                    "tags": null,
+                    "tenancy": null,
+                    "termination_protection": null,
+                    "user_data": null,
+                    "validate_certs": true,
+                    "volumes": null,
+                    "vpc_subnet_id": "subnet-3c9a101d",
+                    "wait": true,
+                    "wait_timeout": 600
+                }
+            },
+            "item": "frontendaws"
+        }
+    ],
+    "skipped": false
+}
