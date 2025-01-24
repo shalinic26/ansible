@@ -48,5 +48,18 @@
       ttl: 1
       value: "{{ item.instances[0].private_ip_address }}"
       wait: true
+      overwrite: true # what if we dont have these route 53 records on aws ? will it create them ? I need to test this...
+    loop: "{{ ec2_info.results}}"
+
+  - name: create public ip for frontend
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}"
+      record: "{{ zone }}"
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].public_ip_address }}"
+      wait: true
       overwrite: true
     loop: "{{ ec2_info.results}}"
+    when: item.item == "frontend" # why this is written last  i feel it should be above loop ??
